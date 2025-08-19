@@ -1,0 +1,39 @@
+Javascript
+
+Everything in JS happens inside the execution context(Variable environment and thread of execution)
+JS is a synchronous single threaded language
+
+Code Execution- Stack based function calling- Once function is run, it is pushed out of the call stack
+
+Hoisting- Trying to print a variable before it is declared doesn’t give error in JS, it will print undefined. It will give error if the variable is not defined in the whole program.
+
+this === Window Object 
+
+JS is loosely typed language, can store any type of value in variable.
+
+Scope is directly dependent on the lexical environment(local memory+ lexical environment of parent).
+
+Temporal Dead Zone- the time between the let variable is hoisted and assigned some value, gives reference error.
+To avoid temporal dead zone, keep all declarations at the top of your code.
+
+Let and const declarations are hoisted(mechanism where declarations of variables, functions, and classes are conceptually moved to the top of their scope during the compilation phase, before the code is executed), but this gives reference error if used before declaration unlike var.
+
+Let is not accessible by window object.
+Const is even more strict than let, need to be initialised with declaration.
+
+Let and Const are Block Scoped
+Block Scope- Compound Statement { }
+
+Shadowing in JS- variable in block overwrites global variable, but not for Let/Const
+Illegal shadowing- shadowing diff variable with diff type in block
+Invalid- 
+let a=10;
+{
+  var a = 20;
+}
+Valid- 
+Var a=10;
+{
+  let a=20;
+}
+          
